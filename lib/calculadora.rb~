@@ -1,0 +1,15 @@
+# in lib/calculadora.rb
+
+
+class Calculadora
+
+  def suma(sumando_1, sumando_2)
+    sumando_1 + sumando_2
+  end
+
+
+  def resta(restando_1 ,restando_2)
+    restando_1 - restando_2
+  end
+ 
+end

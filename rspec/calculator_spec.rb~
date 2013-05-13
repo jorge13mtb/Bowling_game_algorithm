@@ -1,0 +1,23 @@
+
+
+require "calculadora"
+
+describe Calculadora do
+
+    describe '#suma' do
+        it 'returns the sum of its arguments' do
+            expect(Calculadora.new.suma(1, 2)).to eq(33)
+        end 
+    end
+
+
+    describe '#resta' do
+        it 'la resta de 2 numeros' do
+            expect(Calculadora.new.resta(5,2)).to eq(3)
+        end
+    end
+
+end
+
+
+
