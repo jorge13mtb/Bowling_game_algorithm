@@ -88,6 +88,7 @@ describe Bowling do
 	    @bowling_game.knock_down_pins(18, 0) 
 	    @bowling_game.knock_down_pins(19, 4) 
 	    @bowling_game.knock_down_pins(20, 5) 
+	    
 	    expect(@bowling_game.values_list_of_each_throw).to eq([6,2,5,3,4,4,6,2,5,3,4,4,7,1,8,1,9,0,4,5,0])
 	    @bowling_game.calculate_the_score.should equal(83) 
 	end
@@ -187,7 +188,4 @@ describe Bowling do
 	    @bowling_game.calculate_the_score.should equal(300)
 	end
     end
-
-
-
 end			
