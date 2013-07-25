@@ -10,7 +10,7 @@ NUMBER_OF_THE_LAST_NORMAL_THROW = 16
 
 class Bowling
 
-  attr_reader :values_list_of_each_throw
+  attr_accessor :values_list_of_each_throw
 
   def initialize
 	  @values_list_of_each_throw = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
