@@ -1,4 +1,3 @@
-
 =begin
 	   Class Bowling
 	   Jorge Chavarría Rodríguez
