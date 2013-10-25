@@ -10,10 +10,11 @@ NUMBER_OF_THE_LAST_NORMAL_THROW = 16
 
 class Bowling
 
-  attr_accessor :values_list_of_each_throw
+  attr_accessor :values_list_of_each_throw, :results
 
   def initialize
     @values_list_of_each_throw = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+    @results = []
   end
 
 
@@ -23,20 +24,24 @@ class Bowling
 
 
   def calculate_the_score
+    @results = []
     actual_score = 0
     actual_throw_number = 0
-    while actual_throw_number <= @values_list_of_each_throw.length-4 do
+    while actual_throw_number <= @values_list_of_each_throw.length-4 and @values_list_of_each_throw[actual_throw_number] != 0 do
       actual_score += calculate_the_score_of_this_throw(actual_throw_number)
+      @results << actual_score
       actual_throw_number += 2
     end
-    actual_score + calculate_the_score_of_the_last_3_throws
+    actual_score = actual_score + calculate_the_score_of_the_last_3_throws
+    @results << actual_score if actual_throw_number > 8
+    actual_score
   end
 
 
 #             *****          These are private functions            *****
 
-  private
 
+  private
 
   def calculate_the_score_of_this_throw(throw_number)
     pins_knocked_over_in_this_turn = @values_list_of_each_throw[throw_number] + @values_list_of_each_throw[throw_number + 1]
